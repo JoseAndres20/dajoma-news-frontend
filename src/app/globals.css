@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: #2563eb;     /* Azul */
+  --secondary: #10b981;   /* Verde esmeralda */
+  --danger: #ef4444;      /* Rojo */
+  --text-light: #64748b;  /* Gris claro para texto secundario */
+  --text-dark: #0f172a;   /* Gris muy oscuro para texto principal */
+  --border: #e2e8f0;      /* Bordes sutiles */
+  --hover: #f8fafc;       /* Hover states */
+  --card-bg: #ffffff;     /* Fondo de cards */
+  --shadow: rgba(0, 0, 0, 0.1); /* Sombras suaves */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #f1f5f9;
+    --text-light: #94a3b8;
+    --text-dark: #f1f5f9;
+    --border: #334155;
+    --hover: #1e293b;
+    --card-bg: #1e293b;
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Clases utilities adicionales */
+.gradient-text {
+  background: linear-gradient(135deg, #000000, #000000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hover);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-light);
+}
