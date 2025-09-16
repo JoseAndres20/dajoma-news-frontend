@@ -57,13 +57,13 @@ export default function Navbar() {
                         {/* Logo + Nombre */}
                         <Link href="/" className="flex items-center gap-3 group">
                             <div className="relative">
-                                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
+                                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
                                     <span className="text-white font-bold text-lg">DN</span>
                                 </div>
                                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity blur-sm"></div>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent tracking-wide">
+                                <span className="text-xl font-bold text-white tracking-wide">
                                     DAJOMA_NEWS
                                 </span>
                                 <span className="text-xs text-gray-400 -mt-1 hidden sm:block">

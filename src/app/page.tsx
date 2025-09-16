@@ -11,7 +11,7 @@ export default function Home() {
       <div className="max-w-6xl mx-auto">
         {/* Título principal */}
         <h1 className="text-4xl font-bold text-center text-blue-600 dark:text-blue-400 mb-10">
-          📰 DAJOMA News
+          📰News
         </h1>
 
         {/* Lista de noticias */}
