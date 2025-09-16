@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto Next.js - Noticias con Imágenes
 
-## Getting Started
+Este es un proyecto de [Next.js](https://nextjs.org) que muestra noticias con imágenes conectándose a una API de scraping.
 
-First, run the development server:
+## 🚀 Ver en vivo
+
+**URL de la aplicación:** [https://tu-app-noticias.vercel.app](https://tu-app-noticias.vercel.app)
+
+## 📸 Vista previa
+
+![Vista previa de la aplicación](./image.png)
+*Sección principal mostrando noticias con imágenes*
+
+## Características
+
+- Sección de noticias con imágenes
+- Conexión a API de scraping de noticias  
+- Diseño responsivo
+- Filtros por categorías
+
+## Instalación
+
+Primero, instala las dependencias:
+
+```bash
+npm install
+# o
+yarn install
+```
+
+## Ejecutar en desarrollo
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuración
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Crea un archivo `.env.local` con tus claves de API:
 
-## Learn More
+```
+NEWS_API_KEY=tu_clave_aqui
+NEWS_API_URL=https://tu-api-de-noticias.com
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts disponibles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev      # Servidor de desarrollo
+npm run build    # Construir para producción  
+npm run start    # Iniciar servidor de producción
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Desplegar
 
-## Deploy on Vercel
+La forma más fácil de desplegar es usando [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Más información
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para aprender más sobre Next.js:
+
+- [Documentación de Next.js](https://nextjs.org/docs)
+- [Tutorial de Next.js](https://nextjs.org/learn)
