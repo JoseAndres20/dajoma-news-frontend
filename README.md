@@ -43,8 +43,8 @@ Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 Crea un archivo `.env.local` con tus claves de API:
 
 ```
-NEWS_API_KEY=tu_clave_aqui
-NEWS_API_URL=https://tu-api-de-noticias.com
+NEXT_PUBLIC_SUPABASE_UR=URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY:// key supabase
 ```
 
 ## Scripts disponibles
