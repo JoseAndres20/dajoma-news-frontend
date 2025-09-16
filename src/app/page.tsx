@@ -32,7 +32,7 @@ export default function NewsPage() {
         <SearchNews onSearch={handleSearch} />
 
         {/* Lista de noticias */}
-        <NewsList news={filteredNews} loading={loading} loadMore={() => {}} hasMore={false} />
+        <NewsList news={filteredNews} loading={loading} />
 
         {/* Paginación */}
         <Pagination

@@ -6,6 +6,7 @@ import { News } from "@/types/news";
 
 interface NewsListProps {
   news: News[];
+  loadMore?: () => void;
   loading: boolean;
 }
 
