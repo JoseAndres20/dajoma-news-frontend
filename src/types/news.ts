@@ -1,4 +1,3 @@
-
 export interface News {
     id?: number;
     title: string;
@@ -6,5 +5,5 @@ export interface News {
     source: string;
     url: string;
     createdAt: string;
-    imageUrl?: string; // future 
+    imageUrl?: string;
 }

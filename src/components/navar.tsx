@@ -1,14 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { 
     Home, 
-    Newspaper, 
-    Bot, 
-    Monitor, 
-    Rocket, 
     Info, 
     Search, 
     Menu, 
