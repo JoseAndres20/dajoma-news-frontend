@@ -20,11 +20,11 @@ export default function SearchNews({ onSearch }: SearchNewsProps) {
             onSubmit={handleSubmit}
             className="flex items-center justify-center mb-8"
         >
-            <div className="flex items-center w-full max-w-lg bg-gray-100 dark:bg-gray-800 border border-gray-400 dark:border-gray-600 rounded-xl shadow-md px-4 py-2">
+            <div className="flex items-center w-full  bg-gray-100 dark:bg-gray-800 border border-gray-400 dark:border-gray-600 rounded-xl shadow-md px-4 py-2">
                 <Search className="text-gray-500 dark:text-gray-300 mr-2" size={20} />
                 <input
                     type="text"
-                    placeholder="🔎 Buscar noticias..."
+                    placeholder="Buscar noticias..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     className="w-full bg-transparent outline-none text-gray-900 dark:text-gray-200 placeholder-gray-500"
