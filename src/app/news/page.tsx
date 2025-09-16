@@ -3,7 +3,7 @@
 import NewsList from "@/components/NewsList";
 import Pagination from "@/components/Pagination";
 import { useNewsPaginated } from "@/hooks/useNews";
-
+import SearchNews from "@/components/SearchNews";
 export default function NewsPage() {
     const { news, page, totalPages, setPage, loading } = useNewsPaginated();
 
@@ -13,7 +13,10 @@ export default function NewsPage() {
                 <h1 className="text-3xl font-bold text-center text-blue-600 dark:text-blue-400 mb-10">
                     📰 Noticias con Paginación
                 </h1>
-
+ {/*Busqueda */}
+        <SearchNews onSearch={function (query: string): void {
+          throw new Error("Function not implemented.");
+        } } />
                 <NewsList news={news} loading={loading} loadMore={function (): void {
                     throw new Error("Function not implemented.");
                 }} hasMore={false} />
