@@ -1,52 +1,29 @@
 "use client";
 
-import Image from "next/image";
 import { News } from "@/types/news";
-import { useState } from "react";
 import { formatDate } from "@/utils/data";
 
 export default function NewsCard({
     title,
-    //summary,
     source,
     url,
     createdAt,
     imageUrl,
-    textContent
+    textContent,
 }: News) {
-    const [imageError, setImageError] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
+    if (!imageUrl || !imageUrl.startsWith("http")) {
+        return null;
+    }
 
     return (
         <div className="bg-white dark:bg-gray-900 shadow-lg rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group relative">
             {/* Imagen */}
             <div className="relative w-full h-48 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                {imageUrl && !imageError ? (
-                    <>
-                        {isLoading && (
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-                            </div>
-                        )}
-                        <Image
-                            src={imageUrl}
-                            alt={title}
-                            fill
-                            className={`object-cover transition-opacity duration-300 group-hover:scale-105 ${isLoading ? "opacity-0" : "opacity-100"
-                                }`}
-                            onLoad={() => setIsLoading(false)}
-                            onError={() => {
-                                setImageError(true);
-                                setIsLoading(false);
-                            }}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                    </>
-                ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-700">
-                        <p className="text-sm text-gray-500 dark:text-gray-400">Sin imagen</p>
-                    </div>
-                )}
+                <img
+                    src={imageUrl}
+                    alt={title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
             </div>
 
             {/* Contenido */}
