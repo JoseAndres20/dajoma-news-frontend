@@ -7,11 +7,12 @@ import { formatDate } from "@/utils/data";
 
 export default function NewsCard({
     title,
-    summary,
+    //summary,
     source,
     url,
     createdAt,
     imageUrl,
+    textContent
 }: News) {
     const [imageError, setImageError] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
@@ -59,7 +60,7 @@ export default function NewsCard({
                 </h2>
 
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 flex-grow line-clamp-3">
-                    {summary || "No hay resumen disponible para esta noticia."}
+                    {textContent || "No hay resumen disponible para esta noticia."}
                 </p>
 
                 <div className="flex justify-between items-center text-xs text-gray-500 dark:text-gray-400 mt-auto pt-3 border-t border-gray-100 dark:border-gray-800">

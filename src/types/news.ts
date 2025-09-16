@@ -6,4 +6,5 @@ export interface News {
     url: string;
     createdAt: string;
     imageUrl?: string;
+    textContent?: string;
 }

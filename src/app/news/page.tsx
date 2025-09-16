@@ -2,7 +2,7 @@
 
 import NewsList from "@/components/NewsList";
 import Pagination from "@/components/Pagination";
-import { useNewsPaginated } from "@/hooks/useNewsPaginated";
+import { useNewsPaginated } from "@/hooks/useNews";
 
 export default function NewsPage() {
     const { news, page, totalPages, setPage, loading } = useNewsPaginated();
